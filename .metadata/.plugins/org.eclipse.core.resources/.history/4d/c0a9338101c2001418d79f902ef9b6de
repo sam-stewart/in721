@@ -1,0 +1,28 @@
+package bit.stewasc3.genderlearning;
+
+import android.app.Fragment;
+import android.app.FragmentTransaction;
+import android.widget.Toast;
+
+public class QuizActivity extends SingleFragmentActivity 
+	implements QuizQuestionFragment.OnQuizFinished
+{	
+	@Override
+	protected Fragment createFragment()
+	{
+		return new QuizQuestionFragment();
+	}
+
+	@Override
+	public void quizFinished(int score, int totalQuestions)
+	{
+		Toast.makeText(this, Integer.toString(score), Toast.LENGTH_SHORT).show();
+		QuizResultFragment resultFragment = new QuizResultFragment();
+		
+		FragmentTransaction transaction = getFragmentManager().beginTransaction();
+		
+		transaction.replace(R.id.fragmentContainer, resultFragment);
+		transaction.addToBackStack(null);
+		transaction.commit();
+	}
+}

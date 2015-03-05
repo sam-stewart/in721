@@ -1,0 +1,8 @@
+package bit.stewasc3.genderlearning;
+
+import android.app.Fragment;
+
+public class QuizResultFragment extends Fragment
+{
+
+}

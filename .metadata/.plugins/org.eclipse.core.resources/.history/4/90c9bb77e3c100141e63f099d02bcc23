@@ -1,0 +1,21 @@
+package bit.stewasc3.genderlearning;
+
+import android.app.Fragment;
+import android.os.Bundle;
+
+public class QuizResultFragment extends Fragment
+{
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+	}
+	
+	@Override
+	public void onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
+	{
+		
+	}
+	
+	
+
+}

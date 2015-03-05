@@ -1,0 +1,26 @@
+package bit.stewasc3.genderlearning;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+public class QuizActivity extends SingleFragmentActivity 
+	implements QuizQuestionFragment.OnQuizFinished
+{	
+	@Override
+	protected Fragment createFragment()
+	{
+		return new QuizQuestionFragment();
+	}
+
+	@Override
+	public void quizFinished(int score, int totalQuestions)
+	{
+		Toast.makeText(this, Integer.toString(score), Toast.LENGTH_SHORT);
+	}
+}

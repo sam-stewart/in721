@@ -1,0 +1,18 @@
+package bit.stewasc3.genderlearning;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class QuizActivity extends SingleFragmentActivity 
+{	
+	@Override
+	protected Fragment createFragment()
+	{
+		return new QuizQuestionFragment();
+	}
+}
