@@ -17,7 +17,7 @@ public class SettingsActivity extends Activity
 	Button bttnReturn;
 	EditText editTextUserName;
 	int MIN_LENGTH = 5;
-	static String USERNAME_VAL = "bit.stewasc3.activitiesintenspassing.username";
+	static String KEY_USERNAME = "bit.stewasc3.activitiesintenspassing.username";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -40,7 +40,7 @@ public class SettingsActivity extends Activity
 				else
 				{
 					Intent i = new Intent(SettingsActivity.this, DataPassing.class);
-					i.putExtra(USERNAME_VAL, editTextUserName.getText().toString());
+					i.putExtra(KEY_USERNAME, editTextUserName.getText().toString());
 					startActivity(i);
 				}
 			}

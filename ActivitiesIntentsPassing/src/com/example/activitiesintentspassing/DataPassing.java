@@ -26,9 +26,9 @@ public class DataPassing extends Activity
 		
 		Intent i = getIntent();
 		
-		if(i.hasExtra(SettingsActivity.USERNAME_VAL))
+		if(i.hasExtra(SettingsActivity.KEY_USERNAME))
 		{
-			txtViewUsername.setText(i.getStringExtra(SettingsActivity.USERNAME_VAL));
+			txtViewUsername.setText(i.getStringExtra(SettingsActivity.KEY_USERNAME));
 		}
 
 		settingsButton.setOnClickListener(new OnClickListener()
