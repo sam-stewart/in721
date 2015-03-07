@@ -1,0 +1,65 @@
+package com.example.activitiesintentspassing;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class DataPassing extends Activity
+{
+	Button settingsButton;
+	TextView txtViewUsername;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_data_passing);
+		
+		settingsButton = (Button)findViewById(R.id.bttnSettings);
+		txtViewUsername = (TextView)findViewById(R.id.txtViewUsername);
+	
+		if(getIntent().hasExtra(SettingsActivity.USERNAME_VAL));
+		{
+			Bundle b = getIntent().getExtras();
+			txtViewUsername.setText(b.getString(SettingsActivity.USERNAME_VAL));
+		}
+
+		settingsButton.setOnClickListener(new OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				Intent i = new Intent(DataPassing.this, SettingsActivity.class);
+				startActivity(i);
+			}
+		});
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.data_passing, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.txtViewHeader)
+		{
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

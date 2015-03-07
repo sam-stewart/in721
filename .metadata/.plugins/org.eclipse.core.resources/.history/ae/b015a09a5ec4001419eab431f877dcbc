@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ActivitiesIntentsPassing</string>
+    <string name="action_settings">Settings</string>
+    <string name="username">Your username:</string>
+    <string name="no_username">No username chosen yet.</string> 
+
+</resources>

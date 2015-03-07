@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ActivitiesIntentsRequesting</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fermentum non nulla vitae consequat. Duis venenatis, magna a commodo ultrices, odio nulla dignissim ex, vel commodo tellus ut nisl. Nullam porta sagittis lacus, vel pulvinar lacus vehicula quis. Nunc non nulla finibus, mattis lorem dictum, tincidunt turpis. Fusce et tincidunt metus. Donec sed magna non dui pellentesque eleifend. Etiam blandit mi odio, nec vehicula orci semper at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a auctor ipsum, a suscipit sapien. Ut tempus neque in metus fermentum pulvinar vitae justo.</string>
+    <string name="title_activity_data_requesting_settings">DataRequestingSettings</string>
+    <string name="main_screen">Main Screen</string>
+
+</resources>

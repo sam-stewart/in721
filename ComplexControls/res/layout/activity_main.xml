@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Enrol for Music Lessons" />
+        android:text="@string/enrol_header" />
 
     <View
         android:id="@+id/view1"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:layout_alignLeft="@+id/txtViewEnrol"
         android:layout_below="@+id/txtViewEnrol"
+        android:layout_marginTop="1dp"
         android:background="#000000" />
 
     <TextView
@@ -28,17 +28,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view1"
-        android:text="Choose Your Instrument:"
+        android:layout_marginTop="10dp"
+        android:text="@string/choose_instrument"
         android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radGrpInstrument"
         android:layout_below="@+id/radGrpInstrument"
         android:layout_marginTop="27dp"
-        android:text="When do you want to start?"
+        android:text="@string/start_msg"
         android:textSize="12sp" />
 
     <RadioGroup
@@ -51,21 +51,21 @@
             android:id="@+id/radBttnAccordion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Accordion"
+            android:text="@string/accordion"
             android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/radBttnBass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bass"
+            android:text="@string/bass"
             android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/radBttnCello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cello"
+            android:text="@string/cello"
             android:textSize="12sp" />
     </RadioGroup>
 
@@ -73,8 +73,31 @@
         android:id="@+id/spinner1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
         android:entries="@array/month_array"
         android:layout_centerVertical="true" />
+    
+        <View
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginTop="1dp"
+        android:background="#000000" />
+
+        <Button
+            android:id="@+id/bttnEnrol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:layout_marginTop="16dp"
+            android:text="@string/enrol_button" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bttnEnrol"
+            android:layout_marginTop="17dp" />
 
 </RelativeLayout>

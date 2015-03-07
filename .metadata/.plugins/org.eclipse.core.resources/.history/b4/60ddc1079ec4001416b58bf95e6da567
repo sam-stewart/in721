@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ComplexControls</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="accordion">Accordion</string>
+    <string name="bass">Bass</string>
+    <string name="cello">Cello</string>
+    <string name="choose_instrument">Choose your instrument:</string>
+    <string name="enrol_msg">Enrol for Music Lessons</string>
+			i.
+    <string name="enrol_button">Enrol Me</string>
+    
+    <string-array name="month_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+</resources>
