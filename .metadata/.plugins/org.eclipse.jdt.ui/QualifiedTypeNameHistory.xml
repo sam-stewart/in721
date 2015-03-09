@@ -10,7 +10,6 @@
 <fullyQualifiedTypeName name="android.view.KeyEvent"/>
 <fullyQualifiedTypeName name="android.text.Editable"/>
 <fullyQualifiedTypeName name="bit.stewasc3.firstandroidapp.R.id"/>
-<fullyQualifiedTypeName name="android.support.v4.app.FragmentManager"/>
 <fullyQualifiedTypeName name="android.app.Fragment"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="bit.stewasc3.genderlearning.R"/>
@@ -18,7 +17,6 @@
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="android.widget.ImageView"/>
 <fullyQualifiedTypeName name="android.widget.RadioGroup"/>
-<fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.widget.RadioButton"/>
 <fullyQualifiedTypeName name="bit.stewasc3.genderlearning.QuizQuestionFragment.OnQuizFinished"/>
 <fullyQualifiedTypeName name="android.os.Bundle"/>
@@ -35,8 +33,16 @@
 <fullyQualifiedTypeName name="bit.stewasc3.genderlearning.R.id"/>
 <fullyQualifiedTypeName name="bit.stewasc3.genderlearning.QuizResultFragment.OnQuizRestart"/>
 <fullyQualifiedTypeName name="com.example.activitiesintentspassing.R.id"/>
-<fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="bit.stewasc3.activitiesintentsrequesting.R.id"/>
+<fullyQualifiedTypeName name="android.support.v4.app.FragmentActivity"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.EGender"/>
+<fullyQualifiedTypeName name="android.support.v4.app.FragmentManager"/>
+<fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.QuizQuestionFragment.OnAnswerSubmitted"/>
+<fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.R.id"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
 </qualifiedTypeNameHistroy>
