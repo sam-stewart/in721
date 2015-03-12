@@ -1,0 +1,23 @@
+package bit.stewasc3.navlistview;
+
+public class Content
+{
+	private String mTitle;
+	private int mImgResId;
+	
+	public Content(String title, int imgResId)
+	{
+		mTitle = title;
+		mImgResId = imgResId;
+	}
+	
+	public String getTitle()
+	{
+		return mTitle;
+	}
+	
+	public int getImgResId()
+	{
+		return mImgResId;
+	}
+}

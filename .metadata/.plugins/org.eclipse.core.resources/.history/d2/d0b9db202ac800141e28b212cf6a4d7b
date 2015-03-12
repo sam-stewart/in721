@@ -1,0 +1,30 @@
+package bit.stewasc3.navlistview;
+
+import java.util.ArrayList;
+
+import android.content.Context;
+
+public class ContentManager
+{
+	private ArrayList<Content> mContents;
+	private static ContentManager sContentManager;
+	
+	private ContentManager(Context appContext)
+	{
+		mContents = new ArrayList<Content>();
+		
+		mContents.add(new Content("Services", R.drawable.library));
+		mContents.add(new Content("Fun things to do", R.drawable.monarch));
+		mContents.add(new Content("Dining", R.drawable.customhouse));
+		mContents.add(new Content("Shopping", R.drawable.thieves_alley));
+	}
+	
+	public static ContentManager get(Context c)
+	{
+		if (sContentManager == null)
+		{
+			sContentManager = new ContentManager(c.getApplicationContext());
+		}
+		return sContentManager;
+	}
+}
