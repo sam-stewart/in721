@@ -1,0 +1,8 @@
+package bit.stewasc3.fragmentsexample;
+
+import android.app.Fragment;
+
+public class SecondFragment extends Fragment
+{
+
+}

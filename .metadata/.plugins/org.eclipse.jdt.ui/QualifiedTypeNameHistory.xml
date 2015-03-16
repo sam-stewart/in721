@@ -33,16 +33,24 @@
 <fullyQualifiedTypeName name="bit.stewasc3.genderlearning.R.id"/>
 <fullyQualifiedTypeName name="bit.stewasc3.genderlearning.QuizResultFragment.OnQuizRestart"/>
 <fullyQualifiedTypeName name="com.example.activitiesintentspassing.R.id"/>
-<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="bit.stewasc3.activitiesintentsrequesting.R.id"/>
 <fullyQualifiedTypeName name="android.support.v4.app.FragmentActivity"/>
 <fullyQualifiedTypeName name="android.graphics.Color"/>
 <fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.EGender"/>
-<fullyQualifiedTypeName name="android.support.v4.app.FragmentManager"/>
-<fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.QuizQuestionFragment.OnAnswerSubmitted"/>
 <fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.R.id"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="bit.stewasc3.navlistview.R"/>
+<fullyQualifiedTypeName name="bit.stewasc3.navlistview.R.drawable"/>
+<fullyQualifiedTypeName name="bit.stewasc3.navlistview.R.layout"/>
+<fullyQualifiedTypeName name="android.support.v4.app.FragmentManager"/>
+<fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="bit.stewasc3.navlistview.PagerActivity"/>
+<fullyQualifiedTypeName name="bit.stewasc3.navlistview.R.id"/>
+<fullyQualifiedTypeName name="bit.stewasc3.fragmentsexample.R.layout"/>
+<fullyQualifiedTypeName name="android.app.FragmentManager"/>
+<fullyQualifiedTypeName name="bit.stewasc3.fragmentsexample.R.id"/>
 </qualifiedTypeNameHistroy>
