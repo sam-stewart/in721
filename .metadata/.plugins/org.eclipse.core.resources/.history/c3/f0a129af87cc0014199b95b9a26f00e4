@@ -1,0 +1,55 @@
+package bit.stewasc3.complexcontrols;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class DialogueFragment extends DialogFragment
+{
+	Button mButtonYes;
+	Button mButtonNo;
+	String instrument;
+	public static String EXTRA_INSTRUMENT = "bit.stewasc3.complexcontrols.instrument";
+	
+	public DialogueFragment() {}
+	
+	public static DialogFragment newInstance()
+	{
+		DialogFragment frag = new DialogFragment();
+		//Bundle b = new Bundle();
+		//b.putString(DialogueFragment.EXTRA_INSTRUMENT, instrument);
+		//frag.setArguments(b);
+		return frag;
+	}
+	
+	@Override
+	public Dialog onCreateDialog(Bundle savedInstanceState)
+	{
+		//instrument = getArguments().getString(EXTRA_INSTRUMENT);
+		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		builder.setMessage("Are you sure you want to enrol in " + "?")
+			.setTitle("Confirm");
+		/*
+			.setPositiveButton("Yes", new DialogInterface.OnClickListener()
+			{
+				@Override
+				public void onClick(DialogInterface dialog, int which)
+				{
+					
+				}
+			})
+			.setNegativeButton("No", new DialogInterface.OnClickListener()
+			{
+				@Override
+				public void onClick(DialogInterface dialog, int which)
+				{
+					
+				}
+			}); */
+		return builder.create();
+	}
+
+}

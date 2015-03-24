@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="android.content.res.Resources"/>
 <fullyQualifiedTypeName name="bit.stewasc3.firstandroidapp.R.array"/>
 <fullyQualifiedTypeName name="android.view.View.OnLongClickListener"/>
@@ -41,7 +40,6 @@
 <fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.QuizQuestionFragment.OnAnswerSubmitted"/>
 <fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.R.id"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="bit.stewasc3.navlistview.R"/>
 <fullyQualifiedTypeName name="bit.stewasc3.navlistview.R.drawable"/>
 <fullyQualifiedTypeName name="bit.stewasc3.navlistview.R.layout"/>
@@ -53,4 +51,13 @@
 <fullyQualifiedTypeName name="bit.stewasc3.fragmentsexample.R.layout"/>
 <fullyQualifiedTypeName name="android.app.FragmentManager"/>
 <fullyQualifiedTypeName name="bit.stewasc3.fragmentsexample.R.id"/>
+<fullyQualifiedTypeName name="bit.stewasc3.complexcontrols.R.layout"/>
+<fullyQualifiedTypeName name="bit.stewasc3.complexcontrols.R.id"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="bit.stewasc3.complexcontrols.DialogueFragment.NoticeDialogListener"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="bit.stewasc3.complexcontrols.EnrolDialog.onEnrol"/>
 </qualifiedTypeNameHistroy>

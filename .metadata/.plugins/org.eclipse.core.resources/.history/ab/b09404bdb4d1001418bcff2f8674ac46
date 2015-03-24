@@ -1,0 +1,54 @@
+package bit.stewasc3.complexcontrols;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.os.Bundle;
+
+public class EnrolDialog extends DialogFragment
+{
+	public static String EXTRA_MONTH = "bit.stewasc3.complexcontrols.month";
+	public static String EXTRA_INSTRUMENT = "bit.stewasc3.complexcontrols.instrument";
+	
+	public interface onEnrolConfirm {
+		public void onEnrolConfirm(boolean confirmed);
+	}
+	
+	onEnrolConfirm mCallback;
+	
+	public void onAttach(Activity activity)
+	{
+		super.onAttach(activity);
+		
+		try
+		{
+			mCallback = (onEnrolConfirm) activity;
+		}
+		catch (ClassCastException e)
+		{
+			throw new ClassCastException(activity.toString() + "Interface not implemented");
+		}
+	}
+	
+	@Override
+	public Dialog onCreateDialog(Bundle savedInstanceState)
+	{
+		Bundle args = getArguments();
+		
+		String instrument = args.getString(EXTRA_INSTRUMENT);
+		String month = args.getString(EXTRA_MONTH);
+		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		builder.setMessage
+	}
+
+	public DialogFragment newInstance(String month, String instrument)
+	{
+		Bundle args = new Bundle();
+		args.putString(EXTRA_MONTH, month);
+		args.putString(EXTRA_INSTRUMENT, instrument);
+		DialogFragment f = new DialogFragment();
+		f.setArguments(args);
+		return f;
+	}
+}
