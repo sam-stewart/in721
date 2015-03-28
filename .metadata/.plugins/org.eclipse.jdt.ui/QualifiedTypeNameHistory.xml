@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.content.res.Resources"/>
-<fullyQualifiedTypeName name="bit.stewasc3.firstandroidapp.R.array"/>
 <fullyQualifiedTypeName name="android.view.View.OnLongClickListener"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="bit.stewasc3.eventhandlers.R.id"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="android.content.DialogInterface"/>
 <fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
 <fullyQualifiedTypeName name="bit.stewasc3.complexcontrols.EnrolDialog.onEnrol"/>
+<fullyQualifiedTypeName name="bit.phaden.customadapter.R.layout"/>
+<fullyQualifiedTypeName name="bit.phaden.customadapter.R.id"/>
 </qualifiedTypeNameHistroy>
