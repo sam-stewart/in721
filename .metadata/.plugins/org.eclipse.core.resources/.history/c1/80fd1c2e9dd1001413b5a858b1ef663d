@@ -1,8 +1,0 @@
-package bit.stewasc3.complexcontrols;
-
-import android.app.DialogFragment;
-
-public class EnrolDialog extends DialogFragment
-{
-
-}

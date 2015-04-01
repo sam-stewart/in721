@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.view.View.OnLongClickListener"/>
-<fullyQualifiedTypeName name="android.widget.EditText"/>
-<fullyQualifiedTypeName name="bit.stewasc3.eventhandlers.R.id"/>
-<fullyQualifiedTypeName name="android.view.View.OnKeyListener"/>
-<fullyQualifiedTypeName name="android.view.KeyEvent"/>
-<fullyQualifiedTypeName name="android.text.Editable"/>
-<fullyQualifiedTypeName name="bit.stewasc3.firstandroidapp.R.id"/>
-<fullyQualifiedTypeName name="android.app.Fragment"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="bit.stewasc3.genderlearning.R"/>
-<fullyQualifiedTypeName name="bit.stewasc3.genderlearning.R.drawable"/>
-<fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="android.widget.ImageView"/>
-<fullyQualifiedTypeName name="android.widget.RadioGroup"/>
-<fullyQualifiedTypeName name="android.widget.RadioButton"/>
 <fullyQualifiedTypeName name="bit.stewasc3.genderlearning.QuizQuestionFragment.OnQuizFinished"/>
 <fullyQualifiedTypeName name="android.os.Bundle"/>
 <fullyQualifiedTypeName name="android.view.LayoutInflater"/>
@@ -34,14 +19,11 @@
 <fullyQualifiedTypeName name="android.support.v4.app.FragmentActivity"/>
 <fullyQualifiedTypeName name="android.graphics.Color"/>
 <fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.EGender"/>
-<fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.QuizQuestionFragment.OnAnswerSubmitted"/>
 <fullyQualifiedTypeName name="bit.stewasc3.languagetrainer.R.id"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="bit.stewasc3.navlistview.R"/>
 <fullyQualifiedTypeName name="bit.stewasc3.navlistview.R.drawable"/>
 <fullyQualifiedTypeName name="bit.stewasc3.navlistview.R.layout"/>
-<fullyQualifiedTypeName name="android.support.v4.app.FragmentManager"/>
 <fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="bit.stewasc3.navlistview.PagerActivity"/>
@@ -54,10 +36,28 @@
 <fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="bit.stewasc3.complexcontrols.DialogueFragment.NoticeDialogListener"/>
 <fullyQualifiedTypeName name="android.app.AlertDialog"/>
-<fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
 <fullyQualifiedTypeName name="android.content.DialogInterface"/>
 <fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
 <fullyQualifiedTypeName name="bit.stewasc3.complexcontrols.EnrolDialog.onEnrol"/>
 <fullyQualifiedTypeName name="bit.phaden.customadapter.R.layout"/>
 <fullyQualifiedTypeName name="bit.phaden.customadapter.R.id"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
+<fullyQualifiedTypeName name="com.bignerdranch.android.criminalintent.R.string"/>
+<fullyQualifiedTypeName name="android.R.string"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.support.v4.app.FragmentManager"/>
+<fullyQualifiedTypeName name="com.bignerdranch.android.criminalintent.R.layout"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="android.widget.DatePicker.OnDateChangedListener"/>
+<fullyQualifiedTypeName name="bit.sewasc3.dunedinevents.R.id"/>
+<fullyQualifiedTypeName name="android.view.ViewGroup.LayoutParams"/>
+<fullyQualifiedTypeName name="android.widget.ListAdapter"/>
+<fullyQualifiedTypeName name="bit.sewasc3.dunedinevents.R.layout"/>
+<fullyQualifiedTypeName name="bit.sewasc3.dunedinevents.R.style"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView.OnItemClickListener"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
 </qualifiedTypeNameHistroy>
