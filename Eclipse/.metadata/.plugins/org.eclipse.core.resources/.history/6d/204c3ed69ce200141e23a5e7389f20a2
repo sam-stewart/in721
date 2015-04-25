@@ -1,0 +1,8 @@
+package bit.stewasc3.webservices2;
+
+import android.os.HandlerThread;
+
+public class ImageDownloader extends HandlerThread
+{
+
+}

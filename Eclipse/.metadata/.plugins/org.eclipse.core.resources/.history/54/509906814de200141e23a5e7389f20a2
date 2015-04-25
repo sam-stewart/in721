@@ -1,0 +1,72 @@
+package bit.stewasc3.webservices2;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+
+import android.net.Uri;
+
+public class ArtistFetcher
+{
+	private static final String ROOT = "http://ws.audioscrobbler.com/2.0/?";
+	private static final String KEY = "58384a2141a4b9737eacb9d0989b8a8c";
+	private static final String METHOD_GET_ARTISTS = "chart.getTopArtists";
+	private static final String PARAM_LIMIT = "20";
+	private static final String PARAM_FORMAT = "json";
+	
+	public ArrayList<Artist> fetchArtists()
+	{
+		ArrayList<Artist> artists = new ArrayList<Artist>();
+		try
+		{
+			String url = Uri.parse(ROOT).buildUpon()
+					.appendQueryParameter("method", METHOD_GET_ARTISTS)
+					.appendQueryParameter("api_key", KEY)
+					.appendQueryParameter("limit", PARAM_LIMIT)
+					.appendQueryParameter("format", PARAM_FORMAT)
+					.build().toString();
+			String jsonString = getUrl(url);
+			Log.i("ArtistFetecher", jsonString);
+		}
+				
+	}
+	
+	byte[] getByteArray(String urlString) throws IOException
+	{
+		URL url = new URL(urlString);
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		
+		try
+		{
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			InputStream in = conn.getInputStream();
+			
+			if(conn.getResponseCode() != HttpURLConnection.HTTP_OK)
+			{
+				return null;
+			}
+			
+			int bytesRead = 0;
+			byte[] buffer = new byte[1024];
+			
+			while ((bytesRead = in.read(buffer)) > 0)
+			{
+				out.write(buffer, 0, bytesRead);
+			}
+			out.close();
+			return out.toByteArray();
+		}
+		finally
+		{
+			conn.disconnect();
+		}
+	}
+	
+	public String getUrl(String urlString) throws IOException
+	{
+		return new String(getByteArray(urlString));
+	}
+}

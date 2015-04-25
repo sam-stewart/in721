@@ -1,0 +1,70 @@
+package nz.stewpot.photogallery;
+
+import java.util.ArrayList;
+
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+
+public class PhotoGalleryFragment extends Fragment
+{
+	GridView mGrid;
+	ArrayList<GalleryItem> mItems;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setRetainInstance(true);
+		new FetchItemsTask().execute();
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater,
+			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
+	{
+		View v = inflater.inflate(R.layout.fragment_photo_gallery, container, false);
+		mGrid = (GridView) v.findViewById(R.id.gridView);
+		return v;
+	}
+	
+	// Third parameter is type of result produced by AsyncTask, also type of onPostExecute param
+	// First parameter is input parameters, passed into execute(), doInBackGround
+	private class FetchItemsTask extends AsyncTask<Void, Void, ArrayList<GalleryItem>>
+	{
+		@Override
+		protected ArrayList<GalleryItem> doInBackground(Void... arg0)
+		{
+			return new FlickrFetchr().fetchItems();
+		}
+
+		@Override
+		protected void onPostExecute(ArrayList<GalleryItem> result)
+		{
+			mItems = result;
+			setupAdapter();
+		}
+	}
+	
+	void setupAdapter()
+	{
+		if (getActivity() == null || mGrid == null) return;
+		
+		if (mItems != null)
+		{
+			mGrid.setAdapter(new ArrayAdapter<GalleryItem>(getActivity(), 
+					android.R.layout.simple_gallery_item, mItems));
+		}
+		else
+		{
+			mGrid.setAdapter(null);
+		}
+	}
+	
+}

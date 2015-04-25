@@ -1,0 +1,13 @@
+package nz.stewpot.photogallery;
+
+import android.os.HandlerThread;
+
+public class ThumbnailDownloader extends HandlerThread
+{
+	private final static String TAG = "ThumbnailDownloader";
+	
+	public ThumbnailDownloader()
+	{
+		super(TAG);
+	}
+}

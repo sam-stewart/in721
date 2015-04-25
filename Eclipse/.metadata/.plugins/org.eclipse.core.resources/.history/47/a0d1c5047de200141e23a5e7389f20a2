@@ -1,0 +1,69 @@
+// Task 3 - Get top 20 artists thumbnail, name and current listeners.
+// Populate a list view with custom layout displaying all three pieces
+// of information
+
+package bit.stewasc3.webservices2;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+public class MainActivity extends Activity
+{
+	FetcherTask mThread;
+	ArrayAdapter<Artist> mAdapter;
+	ArrayList<Artist> mArtists;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		mThread = new FetcherTask();
+		mThread.execute();
+	}
+	
+	private class ArtistAdapter extends ArrayAdapter<Artist>
+	{
+		public ArtistAdapter(ArrayList<Artist> artists)
+		{
+			super(MainActivity.this, 0, artists);
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent)
+		{
+			if(convertView == null)
+			{
+				convertView = MainActivity.this.getLayoutInflater()
+						.inflate(R.layout.artist_list_item, parent);
+			}
+
+			Artist artist = getItem(position);
+			TextView name = (TextView)convertView.findViewById(R.id.name_textView);
+			name.setText(artist.getName());
+			return convertView;
+		}
+	}
+	
+	private class FetcherTask extends AsyncTask<Void, Void, ArrayList<Artist>>
+	{
+		@Override
+		protected ArrayList<Artist> doInBackground(Void... arg0)
+		{
+			return new ArtistFetcher().fetchArtists();
+		}
+
+		@Override
+		protected void onPostExecute(ArrayList<Artist> result)
+		{
+			mArtists = result;
+		}
+	}
+}

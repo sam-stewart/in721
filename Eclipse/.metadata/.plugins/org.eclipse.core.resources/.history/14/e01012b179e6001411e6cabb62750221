@@ -1,0 +1,91 @@
+package bit.stewasc3.webservices2;
+
+import java.io.IOException;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Message;
+import android.util.Log;
+
+// Token will be ImageView associated with each downloaded image
+public class ImageDownloader<Token> extends HandlerThread
+{
+	public static final int MSG_DOWNLOAD = 0;
+	Handler mHandler;
+	Handler mResponseHandler;
+	Listener<Token> mListener;
+	Map<Token, String> requestMap = Collections.synchronizedMap(new HashMap<Token, String>());
+	public interface Listener<Token> 
+	{
+		void onImageDownloaded(Token token, Bitmap bm);
+	}
+	
+	// Constructor accepts reference to handler from UI thread.
+	public ImageDownloader(Handler responseHandler)
+	{
+		super("ImageDownloader");
+		mResponseHandler = responseHandler;
+	}
+	
+	public void setListener(Listener<Token> listener)
+	{
+		mListener = listener;
+	}
+	
+	@Override
+	protected void onLooperPrepared()
+	{
+		mHandler = new Handler()
+		{
+			@Override
+			public void handleMessage(Message msg)
+			{
+				if (msg.what == MSG_DOWNLOAD)
+				{
+					// TODO: read up on type erasure
+					Token token = (Token)msg.obj;
+					handleRequest(token);
+				}
+			}
+		};
+	}
+	
+	private void handleRequest(final Token token)
+	{
+		try
+		{
+			final String url = requestMap.get(token);
+			if(url == null) return;
+			
+			byte[] bmBytes = new ArtistFetcher().getByteArray(url);
+			final Bitmap bm = BitmapFactory.decodeByteArray(bmBytes, 0, bmBytes.length);
+			
+			mResponseHandler.post(new Runnable() 
+			{
+	            public void run() 
+	            {
+	                if (requestMap.get(token) != url)
+	                    return;
+	                requestMap.remove(token);
+	                mListener.onImageDownloaded(token, bm);
+	            }
+			});
+		}
+		catch(IOException e)
+		{
+		 Log.e("ImageDownloader", "Error retrieving image");
+		}
+	}
+	
+	public void queueImage(Token token, String url)
+	{
+		requestMap.put(token, url);
+		mHandler.obtainMessage(MSG_DOWNLOAD, token)
+			.sendToTarget();
+	}
+}

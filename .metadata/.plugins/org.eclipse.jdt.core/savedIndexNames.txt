@@ -1,4 +1,0 @@
-INDEX VERSION 1.126+/Users/samuel/GitRepos/mobile/.metadata/.plugins/org.eclipse.jdt.core
-2331666711.index
-1320248677.index
-317020692.index

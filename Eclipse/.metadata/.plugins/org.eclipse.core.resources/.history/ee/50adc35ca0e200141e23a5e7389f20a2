@@ -1,0 +1,18 @@
+package bit.stewasc3.webservices2;
+
+import android.os.HandlerThread;
+
+public class ImageDownloader<Token> extends HandlerThread
+{
+	public static final int MSG_DOWNLOAD = 0;
+	
+	public ImageDownloader()
+	{
+		super("ImageDownloader");
+	}
+	
+	public void queueImage(Token token, String url)
+	{
+		
+	}
+}

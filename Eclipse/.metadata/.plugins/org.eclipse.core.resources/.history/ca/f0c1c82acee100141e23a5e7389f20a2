@@ -1,0 +1,48 @@
+package nz.stewpot.photogallery;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Message;
+import android.util.Log;
+
+public class ThumbnailDownloader<Tokene> extends HandlerThread
+{
+	private final static String TAG = "ThumbnailDownloader";
+	public final static int MESSAGE_DOWNLOAD = 0;
+	
+	Handler mHandler;
+	Map<Tokene, String> requestMap = Collections.synchronizedMap(new HashMap<Tokene, String>());
+	
+	public ThumbnailDownloader()
+	{
+		super(TAG);
+	}
+	
+	@Override
+	protected void onLooperPrepared()
+	{
+		mHandler = new Handler()
+		{
+			@Override
+			public void handleMessage(Message msg)
+			{
+				if (msg.what == MESSAGE_DOWNLOAD)
+				{
+					Tokene token = (Tokene) msg.obj;
+					Log.i(TAG, "Got a request for url: " + requestMap.get(token));
+					handleRequest(token);
+				}
+			}
+		};
+		
+	}
+	
+	public void queueThumbnail(Tokene token, String url)
+	{
+		Log.i(TAG, "Got a URL: " + url);
+	}
+}
