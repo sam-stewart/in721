@@ -1,5 +1,11 @@
 package bit.stewasc3.teleportgame;
 
+import android.app.FragmentManager;
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -15,62 +21,53 @@ import java.util.Random;
 
 public class MainActivity extends ActionBarActivity {
 
-    Button mBttnTeleport;
     Random mRand;
     TextView mTvLat;
     TextView mTvLong;
     TextView mTvCity;
     private double mLatitude;
     private double mLongitude;
-    DecimalFormat mThreePlaces = new DecimalFormat("0.000");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mRand = new Random();
-        mBttnTeleport = (Button) findViewById(R.id.bttnTeleport);
-        mBttnTeleport.setOnClickListener(new TeleportHandler());
         mTvLat = (TextView) findViewById(R.id.tvLatitude);
         mTvLong = (TextView) findViewById(R.id.tvLong);
         mTvCity = (TextView) findViewById(R.id.tvCity);
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 400, 1, new CustomLocationListener());
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    private class TeleportHandler implements View.OnClickListener
+    private class CustomLocationListener implements LocationListener
     {
         @Override
-        public void onClick(View v)
+        public void onStatusChanged(String provider, int status, Bundle extras)
         {
-            double lat = mRand.nextDouble() * 90;
-            double longitude = mRand.nextDouble() * 180;
-            mLatitude = (mRand.nextInt() %  2 == 0) ? lat : lat * -1;
-            mLongitude = (mRand.nextInt() % 2 == 0) ? longitude : longitude * -1;
-            mTvLat.setText("Latitude: " + mThreePlaces.format(mLatitude));
-            mTvLong.setText("Longitude: " + mThreePlaces.format(mLongitude));
+
+        }
+
+        @Override
+        public void onLocationChanged(Location location)
+        {
+            mLatitude = location.getLatitude();
+            mLongitude = location.getLongitude();
+            mTvLat.setText("Lat: " + Double.toString(mLatitude));
+            mTvLong.setText("Long: " + Double.toString(mLongitude));
             new FetchTask().execute();
+        }
+
+        @Override
+        public void onProviderEnabled(String provider)
+        {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String provider)
+        {
+
         }
     }
 
@@ -85,7 +82,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         protected void onPostExecute(String result)
         {
-            mTvCity.setText(result);
+            mTvCity.setText("City: " + result);
         }
     }
 }
