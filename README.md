@@ -1,2 +1,2 @@
 # in721
-Mobile Development Paper, Otago Polytechnic.
+Basic weekly Android labs for Oatgo Polytechnic's mobile paper.
