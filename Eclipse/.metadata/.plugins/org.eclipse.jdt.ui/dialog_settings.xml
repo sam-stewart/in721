@@ -50,8 +50,8 @@
 		<item value="515" key="DIALOG_WIDTH"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
 		<item value="410" key="DIALOG_HEIGHT"/>
-		<item value="526" key="DIALOG_X_ORIGIN"/>
 		<item value="222" key="DIALOG_Y_ORIGIN"/>
+		<item value="526" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="520" key="DIALOG_WIDTH"/>
@@ -85,10 +85,10 @@
 	<section name="OverrideMethodDialog">
 		<item value="true" key="showtypes"/>
 	</section>
-	<section name="quick_assist_proposal_size">
-	</section>
 	<section name="BuildPathsPropertyPage">
 		<item value="3" key="pageIndex"/>
+	</section>
+	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="completion_proposal_size">
 		<item value="189" key="size.y"/>

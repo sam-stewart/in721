@@ -1,8 +1,0 @@
-package bit.stewasc3.webservices2;
-
-public class Artist
-{
-	private String mName;
-	private String mImgUrl;
-	private String mListeners;
-}
